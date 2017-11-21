@@ -1,6 +1,10 @@
 # lua-eureka-balancer
 
-#nginx.conf
+## 功能描述
+用lua实现从eureka中发现服务，并自动加入nginx负载均衡。
+
+
+### nginx.conf
 
 ...
 
