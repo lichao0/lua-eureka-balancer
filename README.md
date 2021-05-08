@@ -15,7 +15,7 @@ http {
    
     init_worker_by_lua_block {
         -- init eureka balancer
-        local eureka_balancer = require "resty.xtc.eureka_balancer"
+        local eureka_balancer = require "resty.eureka_balancer"
         local i_eureka_balancer = eureka_balancer:new({dict_name="eureka_balancer"})
         --配置eureka服务器地址
         i_eureka_balancer.set_eureka_service_url({"127.0.0.1:1111","127.0.0.1:1112"})
@@ -30,7 +30,7 @@ http {
             local service_name = "demo-service"
 
             --服务发现+负载均衡
-            local eureka_balancer = require "resty.xtc.eureka_balancer"
+            local eureka_balancer = require "resty.eureka_balancer"
             local i_eureka_balancer = eureka_balancer:new({dict_name="eureka_balancer"}) 
 
             --i_eureka_balancer.ip_hash(service_name) --IP Hash负载算法
